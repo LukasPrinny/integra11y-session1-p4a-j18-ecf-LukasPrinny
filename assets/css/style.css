@@ -1,0 +1,349 @@
+/**
+ * Base
+ */
+
+ /*
+Theme Name: wordpress_ecf
+Theme URI: http://localhost/wordpress_ecf
+Author: Lucas Croisille
+Author URI: 
+Description: thème de test pour l'ECF Integra11y
+Version: 1.0
+*/
+ :root {
+    --brand-satin-linen: #ece9dd;
+    --brand-scorpion: #5b5b5b;
+    --brand-guardsman-red: #da0700;
+    --brand-bright-red: #b10301;
+    --brand-shark: #222325;
+    --brand-wild-sand: #f4f4f4;
+    --brand-mercury: #e3e3e3;
+}
+
+/* new-tegomin-regular - latin */
+@font-face {
+    font-family: 'New Tegomin';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/new-tegomin-v5-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/new-tegomin-v5-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/new-tegomin-v5-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/new-tegomin-v5-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/new-tegomin-v5-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/new-tegomin-v5-latin-regular.svg#NewTegomin') format('svg');
+    /* Legacy iOS */
+}
+
+/* -- breakpoints --
+        480px
+        768px
+*/
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: Helvetica, Sans-Serif;
+    color: var(--brand-scorpion);
+    background: var(--brand-satin-linen);
+}
+
+a {
+    color: var(--brand-guardsman-red);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a img {
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'New Tegomin', Serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    color: var(--brand-shark);
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: var(--brand-shark);
+    line-height: 3.1rem;
+    padding-bottom: 0.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+    color: var(--brand-bright-red);
+    line-height: 1.8rem;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        max-width: 964px;
+        margin: 0 auto;
+    }
+}
+
+.box {
+    border: 0.1rem solid var(--brand-scorpion);
+    border-radius: 0.4rem;
+    background-color: white;
+    height: 100%;
+    overflow: auto;
+    padding: 0.6rem;
+}
+
+.box--header {
+    padding: 3rem 2rem 2.6rem 3.3rem;
+}
+
+@media screen and (min-width:768px) {
+    .box--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.search {
+    margin-bottom: 2rem;
+}
+
+.search__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    border: 0;
+}
+
+.search__field {
+    background: white;
+    color: var(--brand-scorpion);
+    border: 0.1rem solid #ccc;
+    padding: 0.6rem;
+    margin: 0 0.6rem;
+    min-width: 12rem;
+    font-size: 1.6rem;
+}
+
+.search__button {
+    line-height: 2;
+    text-align: center;
+    border: 0.1rem solid var(--brand-bright-red);
+    border-radius: 0.4rem;
+    background: linear-gradient(var(--brand-guardsman-red), var(--brand-bright-red));
+    color: white;
+    cursor: pointer;
+    margin: 0 0.6rem;
+    padding: 0.1rem 0.6rem;
+}
+
+/* Navigation */
+.navigation {
+    margin: 1.6rem 0;
+    text-align: center;
+}
+
+.navigation__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__item {
+    margin: 0;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.navigation__link {
+    display: block;
+    color: var(--brand-scorpion);
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    margin-right: 1rem;
+    border: 0.1rem solid var(--brand-satin-linen);
+}
+
+
+.navigation__link--active,
+.navigation__link:hover,
+.navigation__link:focus {
+    color: white;
+    border-color: var(--brand-bright-red);
+    border-radius: 0.4rem;
+    background: linear-gradient(var(--brand-guardsman-red), var(--brand-bright-red));
+}
+
+/* Main */
+
+.selected-post {
+    background: var(--brand-wild-sand);
+    border: 0.1rem solid var(--brand-satin-linen);
+    margin-bottom: 3.2rem;
+    padding: 0.6rem;
+}
+
+@media screen and (min-width:768px) {
+    .selected-post {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.selected-post__picture {
+    display: block;
+    padding: 0.1rem;
+    border: 0.1rem solid var(--brand-mercury);
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+    .selected-post__picture {
+        max-width: 50%;
+    }
+}
+
+.selected-post__text {
+    margin: 1rem 0 0 0;
+}
+
+@media screen and (min-width:768px) {
+    .selected-post__text {
+        margin: 0 0 0 1rem;
+    }
+}
+
+/* Boxes */
+@media screen and (min-width:768px) {
+    .posts {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .home-post {
+        width: 30%;
+    }
+
+    .home-post--large {
+        width: 60%;
+    }
+}
+
+/* pictures */
+.home-pictures {
+    background: var(--brand-wild-sand);
+    border: 0.1rem solid var(--brand-satin-linen);
+    margin-bottom: 3.2rem;
+}
+
+.home-pictures__title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid var(--brand-satin-linen);
+    padding: 0.6rem 0 0.6rem 1.4rem;
+    margin: 0 0 1rem 0;
+    color: var(--brand-bright-red);
+    font-family: 'New Tegomin', serif;
+}
+
+.home-pictures__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width:76rem) {
+    .home-pictures__list {
+        flex-wrap: nowrap;
+    }
+}
+
+.home-pictures__item {
+    display: block;
+    margin: 0.1rem;
+    width: 20%;
+}
+
+@media screen and (min-width:768px) {
+    .home-pictures__item {
+        width: auto;
+    }
+}
+
+/* Footer */
+.bottom {
+    padding: 1rem 0;
+}
+
+.bottom__text {
+    color: var(--brand-scorpion);
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.bottom__link {
+    color: var(--brand-scorpion);
+}
+
+.bottom__link:hover {
+    text-decoration: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
+}
+
+/* single */
+.single-post {
+    margin: 0 1rem;
+}
